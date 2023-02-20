@@ -5,9 +5,16 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 
+
 class CryptocurrencyPerformance:
     def __init__(self):
+        
         st.set_page_config(layout="wide")
+        imageLOGO = Image.open(urlopen("https://i.ibb.co/mhwTKWs/sboy-logo.png"))
+        st.image(imageLOGO)
+        st.markdown("")
+        logo = Image.open(urlopen("https://i.ibb.co/wpKzc3j/twitter.png"))
+        st.image(logo)
         hide_streamlit_style = """
                     <style>
                     footer {visibility: hidden;}
