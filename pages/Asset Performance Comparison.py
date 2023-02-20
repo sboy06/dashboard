@@ -8,7 +8,6 @@ import numpy as np
 
 class CryptocurrencyPerformance:
     def __init__(self):
-        
         st.set_page_config(layout="wide")
         imageLOGO = Image.open(urlopen("https://i.ibb.co/mhwTKWs/sboy-logo.png"))
         st.image(imageLOGO)
