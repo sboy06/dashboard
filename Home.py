@@ -16,7 +16,7 @@ current_dateTime = datetime.now()
 st.set_page_config(
     page_icon=":chart_with_upwards_trend:",
     layout="wide",
-    theme="dark",
+    theme="darktheme",
 )
 
 imageLOGO = Image.open(urlopen("https://i.ibb.co/mhwTKWs/sboy-logo.png"))
