@@ -3,6 +3,11 @@ import yfinance as yf
 import pandas as pd
 from matplotlib import pyplot as plt
 import numpy as np
+from pathlib import Path
+from urllib.request import urlopen
+from PIL import Image
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 
 class CryptocurrencyPerformance:
