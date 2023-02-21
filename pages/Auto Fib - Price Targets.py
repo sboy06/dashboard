@@ -15,7 +15,9 @@ class CryptoPriceTargets:
         page_icon=":chart_with_upwards_trend:",
         layout="wide",
     )
-    
+    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+    imageLOGO = Image.open(urlopen("https://i.ibb.co/mhwTKWs/sboy-logo.png"))
+    st.title("Auto Fib Tool")
     def __init__(self):
         self.ticker = st.selectbox(
             "Select a Crypto Currency:",
