@@ -15,8 +15,15 @@ class CryptoPriceTargets:
         page_icon=":chart_with_upwards_trend:",
         layout="wide",
     )
+    hide_streamlit_style = """
+                    <style>
+                    footer {visibility: hidden;}
+                    </style>
+                    """
     st.markdown(hide_streamlit_style, unsafe_allow_html=True)
     imageLOGO = Image.open(urlopen("https://i.ibb.co/mhwTKWs/sboy-logo.png"))
+    st.image(imageLOGO)
+    
     def __init__(self):
         self.ticker = st.selectbox(
             "Select a Crypto Currency:",
