@@ -4,7 +4,11 @@ import plotly.graph_objs as go
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from datetime import datetime
-
+from pathlib import Path
+from urllib.request import urlopen
+from PIL import Image
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 class CryptoData:
     def __init__(self):
