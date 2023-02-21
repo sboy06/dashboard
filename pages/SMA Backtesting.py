@@ -2,9 +2,12 @@ import yfinance as yf
 import pandas as pd
 import streamlit as st
 import plotly.graph_objs as go
-from PIL import Image
 import requests
-
+from pathlib import Path
+from urllib.request import urlopen
+from PIL import Image
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 class CryptoTrader:
     def __init__(self):
