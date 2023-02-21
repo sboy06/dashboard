@@ -2,7 +2,11 @@ import yfinance as yf
 import streamlit as st
 import plotly.graph_objects as go
 import numpy as np
-
+from pathlib import Path
+from urllib.request import urlopen
+from PIL import Image
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 
 class CryptoPriceTargets:
