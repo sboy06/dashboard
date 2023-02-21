@@ -23,6 +23,7 @@ class CryptoPriceTargets:
     st.markdown(hide_streamlit_style, unsafe_allow_html=True)
     imageLOGO = Image.open(urlopen("https://i.ibb.co/mhwTKWs/sboy-logo.png"))
     st.image(imageLOGO)
+    st.title("Auto Fib Tool")
     
     def __init__(self):
         self.ticker = st.selectbox(
