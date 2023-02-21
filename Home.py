@@ -21,7 +21,7 @@ st.set_page_config(
 imageLOGO = Image.open(urlopen("https://i.ibb.co/mhwTKWs/sboy-logo.png"))
 st.image(imageLOGO)
 st.markdown("")
-col1, col2 = st.columns(2)
+col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     twitter = Image.open(urlopen("https://i.ibb.co/wpKzc3j/twitter.png"))
@@ -31,6 +31,8 @@ with col2:
     stocktwits = Image.open(urlopen("https://i.ibb.co/f2yDYCr/stocktwits-LOGO-20200115-2-25.png"))
     st.image(stocktwits)
     st.write("[Follow me on StockTwits](https://stocktwits.com/sboy_06)")
+with col3:
+with col4:
 
 hide_streamlit_style = """
             <style>
