@@ -23,18 +23,13 @@ st.image(imageLOGO)
 st.markdown("")
 col1, col2, col3, col4 = st.columns(4)
 
-with col1:
-    twitter = Image.open(urlopen("https://i.ibb.co/wpKzc3j/twitter.png"))
-    st.image(twitter)
-    st.write("[Follow me on Twitter](https://twitter.com/sboy_06)")
-with col2:
-    stocktwits = Image.open(urlopen("https://i.ibb.co/f2yDYCr/stocktwits-LOGO-20200115-2-25.png"))
-    st.image(stocktwits)
-    st.write("[Follow me on StockTwits](https://stocktwits.com/sboy_06)")
-with col3:
-    st.markdown("")
-with col4:
-    st.markdown("")
+twitter = Image.open(urlopen("https://i.ibb.co/wpKzc3j/twitter.png"))
+st.image(twitter)
+st.write("[Follow me on Twitter](https://twitter.com/sboy_06)")
+stocktwits = Image.open(urlopen("https://i.ibb.co/f2yDYCr/stocktwits-LOGO-20200115-2-25.png"))
+st.image(stocktwits)
+st.write("[Follow me on StockTwits](https://stocktwits.com/sboy_06)")
+
 
 hide_streamlit_style = """
             <style>
