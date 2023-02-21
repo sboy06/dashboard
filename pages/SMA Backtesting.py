@@ -37,6 +37,7 @@ class CryptoTrader:
                 "ETH-USD",
                 "DOT-USD",
                 "ATOM-USD",
+                "AXS-USD",
                 "HEX-USD",
                 "QNT-USD",
                 "BNB-USD",
