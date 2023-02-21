@@ -32,7 +32,9 @@ with col2:
     st.image(stocktwits)
     st.write("[Follow me on StockTwits](https://stocktwits.com/sboy_06)")
 with col3:
+    st.markdown("")
 with col4:
+    st.markdown("")
 
 hide_streamlit_style = """
             <style>
