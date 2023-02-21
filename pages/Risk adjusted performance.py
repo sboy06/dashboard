@@ -20,8 +20,6 @@ class RiskAdjustedPerformance:
                     </style>
                     """
         st.markdown(self.hide_streamlit_style, unsafe_allow_html=True)
-        imageLOGO = Image.open(urlopen("https://i.ibb.co/mhwTKWs/sboy-logo.png"))
-        st.image(imageLOGO)
         st.title("Risk adjusted performance")
         st.markdown("")
         st.warning(
