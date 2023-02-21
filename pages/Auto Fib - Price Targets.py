@@ -12,9 +12,6 @@ class CryptoPriceTargets:
         layout="wide",
     )
     
-    imageLOGO = Image.open(urlopen("https://i.ibb.co/mhwTKWs/sboy-logo.png"))
-    st.image(imageLOGO)
-    
     def __init__(self):
         self.ticker = st.selectbox(
             "Select a Crypto Currency:",
