@@ -3,7 +3,11 @@ import streamlit as st
 from plotly.subplots import make_subplots
 import plotly.graph_objs as go
 from datetime import datetime, timedelta
-
+from pathlib import Path
+from urllib.request import urlopen
+from PIL import Image
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 class ReversalCandleDetection:
     def __init__(self):
