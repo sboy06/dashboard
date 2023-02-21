@@ -15,6 +15,8 @@ class CryptoRiskAnalysis:
             """
         st.markdown(hide_streamlit_style, unsafe_allow_html=True)
     def run(self):
+        imageLOGO = Image.open(urlopen("https://i.ibb.co/mhwTKWs/sboy-logo.png"))
+        st.image(imageLOGO)
         st.title("Cryptocurrency Risk Analysis")
 
         ticker = st.selectbox(
