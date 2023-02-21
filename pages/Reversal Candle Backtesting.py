@@ -8,7 +8,8 @@ from datetime import datetime, timedelta
 class ReversalCandleDetection:
     def __init__(self):
         st.set_page_config(layout="wide")
-
+        imageLOGO = Image.open(urlopen("https://i.ibb.co/mhwTKWs/sboy-logo.png"))
+        st.image(imageLOGO)
         st.title("Reversal Candle Detection App")
         st.warning(
             "This app uses daily candles to identify reversal patterns. If the patterns appear at the top of the trend, it indicates a bearish signal. Conversely, patterns at the bottom of the trend indicate a bullish signal."
