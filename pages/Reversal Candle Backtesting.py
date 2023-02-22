@@ -3,17 +3,12 @@ import streamlit as st
 from plotly.subplots import make_subplots
 import plotly.graph_objs as go
 from datetime import datetime, timedelta
-from pathlib import Path
-from urllib.request import urlopen
-from PIL import Image
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
+
 
 class ReversalCandleDetection:
     def __init__(self):
         st.set_page_config(layout="wide")
-        imageLOGO = Image.open(urlopen("https://i.ibb.co/mhwTKWs/sboy-logo.png"))
-        st.image(imageLOGO)
+
         st.title("Reversal Candle Detection App")
         st.warning(
             "This app uses daily candles to identify reversal patterns. If the patterns appear at the top of the trend, it indicates a bearish signal. Conversely, patterns at the bottom of the trend indicate a bullish signal."
