@@ -132,6 +132,7 @@ class CryptocurrencyPerformance:
             "TGT",
             "SHEL",
             "MGM",
+            "VTSAX",
         )
 
     def app(self):
