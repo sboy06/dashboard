@@ -133,7 +133,6 @@ class CryptocurrencyPerformance:
             "SHEL",
             "MGM",
             "VTSAX",
-            "SPX",
         )
 
     def app(self):
