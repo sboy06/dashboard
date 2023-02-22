@@ -2,12 +2,9 @@ import yfinance as yf
 import pandas as pd
 import streamlit as st
 import plotly.graph_objs as go
-import requests
-from pathlib import Path
-from urllib.request import urlopen
 from PIL import Image
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
+import requests
+
 
 class CryptoTrader:
     def __init__(self):
@@ -26,10 +23,8 @@ class CryptoTrader:
                 </style>
                 """
         st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-        
+
     def select_crypto(self):
-        imageLOGO = Image.open(urlopen("https://i.ibb.co/mhwTKWs/sboy-logo.png"))
-        st.image(imageLOGO)
         self.crypto = st.selectbox(
             "Select a cryptocurrency",
             [
@@ -37,7 +32,6 @@ class CryptoTrader:
                 "ETH-USD",
                 "DOT-USD",
                 "ATOM-USD",
-                "AXS-USD",
                 "HEX-USD",
                 "QNT-USD",
                 "BNB-USD",
