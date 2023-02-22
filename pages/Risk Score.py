@@ -2,11 +2,7 @@ import streamlit as st
 import plotly.graph_objects as go
 import yfinance as yf
 from datetime import datetime
-from pathlib import Path
-from urllib.request import urlopen
-from PIL import Image
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
+
 
 class CryptoRiskAnalysis:
     def __init__(self):
@@ -18,9 +14,8 @@ class CryptoRiskAnalysis:
             </style>
             """
         st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
     def run(self):
-        imageLOGO = Image.open(urlopen("https://i.ibb.co/mhwTKWs/sboy-logo.png"))
-        st.image(imageLOGO)
         st.title("Cryptocurrency Risk Analysis")
 
         ticker = st.selectbox(
@@ -30,7 +25,6 @@ class CryptoRiskAnalysis:
                 "ETH-USD",
                 "DOT-USD",
                 "ATOM-USD",
-                "AXS-USD",
                 "HEX-USD",
                 "QNT-USD",
                 "BNB-USD",
