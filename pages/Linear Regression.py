@@ -4,11 +4,7 @@ import plotly.graph_objs as go
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from datetime import datetime
-from pathlib import Path
-from urllib.request import urlopen
-from PIL import Image
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
+
 
 class CryptoData:
     def __init__(self):
@@ -20,9 +16,6 @@ class CryptoData:
                 </style>
                 """
         self.st.markdown(self.hide_streamlit_style, unsafe_allow_html=True)
-        self.imageLOGO = Image.open(urlopen("https://i.ibb.co/mhwTKWs/sboy-logo.png"))
-        self.st.image(self.imageLOGO)
-        
         self.st.title("Cryptocurrency Historical Data")
         self.tickers = [
             "BTC-USD",
