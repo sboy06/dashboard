@@ -4,15 +4,10 @@ import yfinance as yf
 import pandas as pd
 import riskfolio as rp
 import matplotlib.pyplot as plt
-import numpy as np
 import seaborn as sns
 import streamlit as st
 import datetime
-from pathlib import Path
-from urllib.request import urlopen
-from PIL import Image
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
+
 
 class RiskAdjustedPerformance:
     def __init__(self):
@@ -24,8 +19,7 @@ class RiskAdjustedPerformance:
                     </style>
                     """
         st.markdown(self.hide_streamlit_style, unsafe_allow_html=True)
-        imageLOGO = Image.open(urlopen("https://i.ibb.co/mhwTKWs/sboy-logo.png"))
-        st.image(imageLOGO)
+
         st.title("Risk adjusted performance")
         st.markdown("")
         st.warning(
