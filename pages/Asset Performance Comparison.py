@@ -3,11 +3,6 @@ import yfinance as yf
 import pandas as pd
 from matplotlib import pyplot as plt
 import numpy as np
-from pathlib import Path
-from urllib.request import urlopen
-from PIL import Image
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
 
 
 class CryptocurrencyPerformance:
@@ -19,9 +14,6 @@ class CryptocurrencyPerformance:
                     </style>
                     """
         st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-        imageLOGO = Image.open(urlopen("https://i.ibb.co/mhwTKWs/sboy-logo.png"))
-        st.image(imageLOGO)
-        
         self.tickers = (
             "BTC-USD",
             "ETH-USD",
