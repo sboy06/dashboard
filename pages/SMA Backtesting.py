@@ -2,8 +2,7 @@ import yfinance as yf
 import pandas as pd
 import streamlit as st
 import plotly.graph_objs as go
-from PIL import Image
-import requests
+from streamlit_extras.app_logo import add_logo
 
 
 class CryptoTrader:
@@ -15,7 +14,11 @@ class CryptoTrader:
 
     def set_page_config(self, layout="wide"):
         st.set_page_config(layout=layout)
-
+        add_logo("https://i.ibb.co/GCtVYbv/sboylogo-no-Bg.png", height=300)
+        st.markdown(
+        "<h2 style='text-align: center; font-family: Avant Garde; align: center; padding: 5px 17px; border: 2px solid white; display: inline-block; margin: 30px 20px 20px -10px; border-radius: 10px; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);'>SMA Backtesting Tool</h2>",
+        unsafe_allow_html=True,
+        )
     def hide_streamlit_style(self):
         hide_streamlit_style = """
                 <style>
@@ -30,6 +33,8 @@ class CryptoTrader:
             [
                 "BTC-USD",
                 "ETH-USD",
+                "PLS-USD",
+                "APT21794-USD",
                 "DOT-USD",
                 "ATOM-USD",
                 "HEX-USD",
