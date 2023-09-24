@@ -3,21 +3,28 @@ import streamlit as st
 from plotly.subplots import make_subplots
 import plotly.graph_objs as go
 from datetime import datetime, timedelta
-
+from streamlit_extras.app_logo import add_logo
 
 class ReversalCandleDetection:
     def __init__(self):
         st.set_page_config(layout="wide")
+        add_logo("https://i.ibb.co/GCtVYbv/sboylogo-no-Bg.png", height=300)
 
-        st.title("Reversal Candle Detection App")
+        st.markdown(
+            "<h2 style='text-align: center; font-family: Avant Garde; align: center; padding: 5px 17px; border: 2px solid white; display: inline-block; margin: 30px 20px 20px -10px; border-radius: 10px; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);'>Reverse Candle Detection App</h2>",
+            unsafe_allow_html=True,
+        )
         st.warning(
             "This app uses daily candles to identify reversal patterns. If the patterns appear at the top of the trend, it indicates a bearish signal. Conversely, patterns at the bottom of the trend indicate a bullish signal."
         )
+        st.markdown("---")
 
         self.ticker_list = [
             "BTC-USD",
             "ETH-USD",
             "DOT-USD",
+            "PLS-USD",
+            "APT21794-USD",
             "ATOM-USD",
             "HEX-USD",
             "QNT-USD",
