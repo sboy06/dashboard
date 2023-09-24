@@ -5,7 +5,7 @@ from urllib.request import urlopen
 from datetime import datetime
 from streamlit_extras.app_logo import add_logo
 import ssl
-
+ 
 ssl._create_default_https_context = ssl._create_unverified_context
 
 current_dateTime = datetime.now()
