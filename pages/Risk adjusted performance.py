@@ -7,11 +7,12 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 import datetime
-
+from streamlit_extras.app_logo import add_logo
 
 class RiskAdjustedPerformance:
     def __init__(self):
         st.set_page_config(layout="wide")
+        add_logo("https://i.ibb.co/GCtVYbv/sboylogo-no-Bg.png", height=300)
 
         self.hide_streamlit_style = """
                     <style>
@@ -20,7 +21,10 @@ class RiskAdjustedPerformance:
                     """
         st.markdown(self.hide_streamlit_style, unsafe_allow_html=True)
 
-        st.title("Risk adjusted performance")
+        st.markdown(
+        "<h2 style='text-align: center; font-family: Avant Garde; align: center; padding: 5px 17px; border: 2px solid white; display: inline-block; margin: 30px 20px 20px -10px; border-radius: 10px; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);'>Risk Adjusted Performance</h2>",
+        unsafe_allow_html=True,
+        )
         st.markdown("")
         st.warning(
             "Select multiple assets to compare their risk-adjusted performance in order to determine the optimal portfolio."
@@ -32,6 +36,7 @@ class RiskAdjustedPerformance:
             "ETH-USD",
             "DOT-USD",
             "AVAX-USD",
+            "APT21794-USD",
             "ATOM-USD",
             "HEX-USD",
             "FET-USD",
