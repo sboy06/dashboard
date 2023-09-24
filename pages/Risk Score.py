@@ -2,12 +2,12 @@ import streamlit as st
 import plotly.graph_objects as go
 import yfinance as yf
 from datetime import datetime
-
+from streamlit_extras.app_logo import add_logo
 
 class CryptoRiskAnalysis:
     def __init__(self):
         st.set_page_config(layout="wide")
-
+        add_logo("https://i.ibb.co/GCtVYbv/sboylogo-no-Bg.png", height=300)
         hide_streamlit_style = """
             <style>
             footer {visibility: hidden;}
@@ -16,14 +16,19 @@ class CryptoRiskAnalysis:
         st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
     def run(self):
-        st.title("Cryptocurrency Risk Analysis")
+        st.markdown(
+        "<h2 style='text-align: center; font-family: Avant Garde; align: center; padding: 5px 17px; border: 2px solid white; display: inline-block; margin: 30px 20px 20px -10px; border-radius: 10px; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);'>Crypto Risk Analysis Tool</h2>",
+        unsafe_allow_html=True,
+        )
 
         ticker = st.selectbox(
             "Select the ticker of the cryptocurrency or Stock you want to analyze: ",
             [
                 "BTC-USD",
                 "ETH-USD",
+                "PLS-USD"
                 "DOT-USD",
+                "APT21794-USD",
                 "ATOM-USD",
                 "HEX-USD",
                 "QNT-USD",
