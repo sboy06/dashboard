@@ -4,23 +4,29 @@ import plotly.graph_objs as go
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from datetime import datetime
-
+from streamlit_extras.app_logo import add_logo
 
 class CryptoData:
     def __init__(self):
         self.st = st
         self.st.set_page_config(layout="wide")
+        add_logo("https://i.ibb.co/GCtVYbv/sboylogo-no-Bg.png", height=300)
         self.hide_streamlit_style = """
                 <style>
                 footer {visibility: hidden;}
                 </style>
                 """
         self.st.markdown(self.hide_streamlit_style, unsafe_allow_html=True)
-        self.st.title("Cryptocurrency Historical Data")
+        st.markdown(
+            "<h2 style='text-align: center; font-family: Avant Garde; align: center; padding: 5px 17px; border: 2px solid white; display: inline-block; margin: 30px 20px 20px -10px; border-radius: 10px; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);'>Linear Regression</h2>",
+            unsafe_allow_html=True,
+        )
+
         self.tickers = [
             "BTC-USD",
             "ETH-USD",
             "DOT-USD",
+            "APT21794-USD",
             "ATOM-USD",
             "HEX-USD",
             "QNT-USD",
