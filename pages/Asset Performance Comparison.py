@@ -2,8 +2,8 @@ import streamlit as st
 import yfinance as yf
 import pandas as pd
 from matplotlib import pyplot as plt
-import numpy as np
-
+from urllib.request import urlopen
+from streamlit_extras.app_logo import add_logo
 
 class CryptocurrencyPerformance:
     def __init__(self):
@@ -14,9 +14,16 @@ class CryptocurrencyPerformance:
                     </style>
                     """
         st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+        add_logo("https://i.ibb.co/GCtVYbv/sboylogo-no-Bg.png", height=300)
+
+        st.markdown("")
+
         self.tickers = (
             "BTC-USD",
             "ETH-USD",
+            "PLS-USD",
+            "APT21794-USD",
             "DOT-USD",
             "ATOM-USD",
             "HEX-USD",
@@ -132,11 +139,14 @@ class CryptocurrencyPerformance:
             "TGT",
             "SHEL",
             "MGM",
-            "VTSAX",
         )
 
     def app(self):
-        st.title("Cryptocurrency & Stock Performance")
+        st.markdown(
+            "<h2 style='text-align: center; font-family: Avant Garde; align: center; padding: 5px 17px; border: 2px solid white; display: inline-block; margin: 30px 20px 20px -10px; border-radius: 10px; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);'>Crypto & Stock Performance Comparison</h2>",
+            unsafe_allow_html=True,
+        )
+        st.markdown("---")
         st.write("Performance Application")
 
     def display_as_percentage(self):
