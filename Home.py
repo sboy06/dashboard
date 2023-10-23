@@ -107,10 +107,10 @@ with pls:
         unsafe_allow_html=True,
     )
     imagePLS = Image.open(
-        urlopen("https://s2.coinmarketcap.com/static/img/coins/64x64/11145.png")
+        urlopen("https://assets.coingecko.com/coins/images/25666/standard/11145.png?1696524795")
     )
     st.image(imagePLS)
-    st.write("HEX Price")
+    st.write("PLS Price")
     st.line_chart(PLS_His.Close)
     st.write("HEX Volume")
     st.bar_chart(PLS_His.Volume, width=330, height=230)
