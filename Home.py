@@ -107,7 +107,7 @@ with pls:
         unsafe_allow_html=True,
     )
     imagePLS = Image.open(
-        urlopen("https://assets.coingecko.com/coins/images/25666/standard/11145.png?1696524795")
+        urlopen("https://pulsechain.com/img/wordmark.png")
     )
     st.image(imagePLS)
     st.write("PLS Price")
