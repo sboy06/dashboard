@@ -108,7 +108,7 @@ with pls:
     )
     imagePLS = Image.open(urlopen("https://pulsechain.com/img/wordmark.png"))
 
-    new_dimensions = (200, 200)
+    new_dimensions = (120, 120)
 
     image_resized = imagePLS.resize(new_dimensions, Image.ANTIALIAS)
  
