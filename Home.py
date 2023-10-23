@@ -106,9 +106,12 @@ with pls:
         "<h5 style='text-align: center; font-family: Avant Garde; align: center; padding: 5px 5px; border: 2px solid white; display: inline-block; margin: 30px 20px 40px -10px; border-radius: 10px; box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);'>PulseChain</h5>",
         unsafe_allow_html=True,
     )
-    imagePLS = Image.open(
-        urlopen("https://pulsechain.com/img/wordmark.png")
-    )
+    imagePLS = Image.open(urlopen("https://pulsechain.com/img/wordmark.png"))
+
+    new_dimensions = (200, 200)
+
+    image_resized = imagePLS.resize(new_dimensions, Image.ANTIALIAS)
+ 
     st.image(imagePLS)
     st.write("PLS Price")
     st.line_chart(PLS_His.Close)
